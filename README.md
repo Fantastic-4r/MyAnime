@@ -108,15 +108,43 @@ Optional:
 ![](https://i.imgur.com/scpmRy4.jpg)
 
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### Anime
+
+   | Property      | Type     | Description                     |
+   | ------------- | -------- | --------------------------------|
+   | mal_id        | Int      | unique id of the anime          |
+   | image_url     | String   | image url of the anime          |
+   | title         | String   | name of the anime               |
+   | episodes      | Int      | number of episodes for the anime|
+
+#### AnimeList
+   | Property      | Type     | Description              |
+   | ------------- | -------- | -------------------------|
+   | list          | [Anime]  | an array of Anime objects|
+    
+   
+#### Networking
+
+
+* Discover screen
+    * (Read/GET) Query top 50 popular anime on MyAnimeList
+* Search screen
+    * (Read/GET) Query all anime that starts with the letter/character as inputted by user in search bar
+
+#### Jikan API
+* Base URL - https://api.jikan.moe/v3
+* Endpoints
+    * Search screen
+
+      | HTTP Verb     | Endpoint                     | Description                                        |
+      | ------------- | -----------------------------| ---------------------------------------------------|
+      | GET           | /search/anime/?q=title       | returns a list of anime that starts with the string provided by user for title as the search query|
+
+    * Discover screen
+        | HTTP Verb     | Endpoint                     | Description                                        |
+        | ------------- | -----------------------------| ---------------------------------------------------|
+        | GET           | /top/anime                   | returns the top 50 items or anime on MyAnimeList   |
+
