@@ -111,23 +111,38 @@ Optional:
 ## Schema 
 
 ### Models
-#### Anime
+#### AnimeFromSearch
 
    | Property      | Type     | Description                     |
    | ------------- | -------- | --------------------------------|
    | mal_id        | Int      | unique id of the anime          |
    | image_url     | String   | image url of the anime          |
+   | synopsis      | String   | brief summary of the anime      | 
    | title         | String   | name of the anime               |
    | episodes      | Int      | number of episodes for the anime|
 
-#### AnimeList
-   | Property      | Type     | Description              |
-   | ------------- | -------- | -------------------------|
-   | list          | [Anime]  | an array of Anime objects|
-    
+#### SearchResults
+   | Property      | Type               | Description                        |
+   | ------------- | ------------------ | -----------------------------------|
+   | results       | [AnimeFromSearch]  | an array of AnimeFromSearch objects|
+   
+#### AnimeFromTop
+
+   | Property      | Type     | Description                                           |
+   | ------------- | -------- | ------------------------------------------------------|
+   | mal_id        | Int      | unique id of the anime                                |
+   | rank          | Int      | the anime's rank among the top 50 anime on MyAnimeList|
+   | image_url     | String   | image url of the anime                                | 
+   | title         | String   | name of the anime                                     |
+   | episodes      | Int      | number of episodes for the anime                      |
+
+#### SearchResults
+   | Property      | Type               | Description                        |
+   | ------------- | ------------------ | -----------------------------------|
+   | top           | [AnimeFromTop]     | an array of AnimeFromTop objects   |
+   
    
 #### Networking
-
 
 * Discover screen
     * (Read/GET) Query top 50 popular anime on MyAnimeList
