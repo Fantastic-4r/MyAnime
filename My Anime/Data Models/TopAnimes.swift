@@ -7,6 +7,6 @@
 
 import UIKit
 
-class TopAnimes: NSObject, Decodable {
+class TopAnimes: Decodable {
    let top: [AnimeFromTop] //top is the key for the array of top animes in the JSON format
 }
