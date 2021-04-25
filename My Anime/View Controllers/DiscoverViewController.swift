@@ -16,7 +16,7 @@ class DiscoverViewController: UIViewController {
     }
     
     func getData() {
-        let urlString = "https://api.jikan.moe/v3/genre/type" //url String
+        let urlString = "https://api.jikan.moe/v3/top/anime" //url String
     //Create a url object from the url String. Use guard so that if cannot be created as an url object, then provide optional error message. Created as an optional
         guard let url = URL(string: urlString) else {
             //if not able to create a url from urlString, just return
@@ -33,7 +33,7 @@ class DiscoverViewController: UIViewController {
                 return
             }
             
-             var results : TopAnimes?
+            var results : TopAnimes?
             //do - catch function because the decoder function can actually throw an error so we want to account for that too
             do {
                 results = try JSONDecoder().decode(TopAnimes.self, from: data)
@@ -44,7 +44,7 @@ class DiscoverViewController: UIViewController {
             guard let final = results else {
                 return
             }
-            print(final.top)
+            print(final.top[0].title)
 
                 
             print("Got data: \(data)")
