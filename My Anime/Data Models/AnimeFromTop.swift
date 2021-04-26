@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 struct AnimeFromTop:  Decodable {
    let mal_id: Int
    let rank: Int

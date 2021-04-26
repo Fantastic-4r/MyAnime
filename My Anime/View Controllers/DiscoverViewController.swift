@@ -31,8 +31,7 @@ class DiscoverViewController: UIViewController {
             guard let data = data, error == nil else {
                 return
             }
-            print(data)
-        
+
             var results : TopAnimes?
             //do - catch function because the decoder function can actually throw an error so we want to account for that too
             
