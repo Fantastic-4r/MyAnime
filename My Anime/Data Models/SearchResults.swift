@@ -7,6 +7,6 @@
 
 import UIKit
 
-class SearchResults: NSObject, Decodable {
+struct SearchResults: Decodable {
     let results : [AnimeFromSearch] //results is the JSON key from endpoint search that is the array of objects that includes the keys-values in the Anime object
 }
