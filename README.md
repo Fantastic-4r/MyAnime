@@ -5,9 +5,10 @@ Original App Design Project - README
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
+5. [App Walkthrough GIF](#App-Walkthrough-GIF)
 
 ## Overview
 ### Description
@@ -27,8 +28,8 @@ MyAnime allows users to keep track of the animes they are watching, have already
 
 **Required Must-have Stories**
 
-* [ ] User can view a list of popular animes
-* [ ] User can search for an anime
+* [x] User can view a list of popular animes
+* [x] User can search for an anime
 * [ ] User can add an anime from search results to their Watching list
 * [ ] User can add an anime from search results to their Watched list.
 * [ ] User can add an anime from search results to their To Watch list.
@@ -163,3 +164,8 @@ Optional:
         | ------------- | -----------------------------| ---------------------------------------------------|
         | GET           | /top/anime                   | returns the top 50 items or anime on MyAnimeList   |
 
+
+## App Walkthrough GIF
+
+### User can view a list of popular animes and user can search for an anime
+![](https://i.imgur.com/FxYwGbf.gif)
