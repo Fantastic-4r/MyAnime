@@ -15,7 +15,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     var filteredAnimes: SearchResults? //this property will hold the animes that user searches for
-
+    
     // topResults will contain the array of dictionaries that represent the top animes returned to us by an API call
     var topResults : TopAnimes?
     //By initializing UISearchController with a nil value for searchResultsController, you’re telling the search controller that you want to use the same view you’re searching to display the results. If you specify a different view controller here, the search controller will display the results in that view controller instead.
@@ -48,26 +48,29 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         // Sets this view controller as presenting view controller for the search interface
         definesPresentationContext = true //displays the search bar in the view controller properly
         searchController.searchBar.placeholder = "Search anime by name"
-                
+        
         
         // Loading data for the top anime view controller in Discover View
         topTableView.dataSource = self
         topTableView.delegate = self
-        getTopAnimes() //API call to get an array of dictionaries of top animes
-        topTableView.reloadData() //calls on the table view functions to reload data with data received from the API call
+        let group = DispatchGroup()
+        group.enter()
+        getTopAnimes(group) //API call to get an array of dictionaries of top animes
+        group.wait()
+        topTableView.reloadData()//calls on the table view functions to reload data with data received from the API call
         
     }
     
     //MARK: - API Call and table view configurations for the Top Anime table view controller
-    func getTopAnimes() {
+    func getTopAnimes(_ group: DispatchGroup) {
         let urlString = "https://api.jikan.moe/v3/top/anime" //url String
-    //Create a url object from the url String. Use guard so that if cannot be created as an url object, then provide optional error message. Created as an optional
+        //Create a url object from the url String. Use guard so that if cannot be created as an url object, then provide optional error message. Created as an optional
         guard let url = URL(string: urlString) else {
             //if not able to create a url from urlString, just return
             print("Not able to create url object from url String")
             return
         }
-   //Create a Data Task, which is how you perform actual API calls and networking tasks
+        //Create a Data Task, which is how you perform actual API calls and networking tasks
         //the completionHandler returns 3 optional parameters, but we only care about the Data and Error so we will do _ for discardable for the 2nd parameter URLResponse
         let task = URLSession.shared.dataTask(with: url, completionHandler: { [self]
             data, _, error in
@@ -80,18 +83,19 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
                 results = try JSONDecoder().decode(TopAnimes.self, from: data)
             } catch {
                 print("Failed to Decode Error")
-    
+                
             }
-
+            
             guard let final = results else {
                 return
             } //final is the top results array
-          //  print(final.top)
+            //  print(final.top)
             topResults = final
-      //      print(topResults?.top[0] as Any) //if episodes = nil, set episodes to 0
+            group.leave()
+            //      print(topResults?.top[0] as Any) //if episodes = nil, set episodes to 0
             
-
-        //   print("Got data: \(data)")
+            
+            //   print("Got data: \(data)")
         })
         task.resume() //starts the API call
         
