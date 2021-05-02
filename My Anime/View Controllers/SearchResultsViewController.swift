@@ -17,6 +17,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     //Whenever user types in the search bar, thiss function is called to update the Search Results
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("called")
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -31,7 +32,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     func getSearchResults(searchQuery: String) {
         let urlString = "https://api.jikan.moe/v3/search/anime?q=\(searchQuery)" //url String
     //Create a url object from the url String. Use guard so that if cannot be created as an url object, then provide optional error message. Created as an optional
-    //    print(urlString)
+//        print(urlString)
         guard let url = URL(string: urlString) else {
             //if not able to create a url from urlString, just return
             print("Not able to create url object from url String")
@@ -39,6 +40,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         }
    //Create a Data Task, which is how you perform actual API calls and networking tasks
         //the completionHandler returns 3 optional parameters, but we only care about the Data and Error so we will do _ for discardable for the 2nd parameter URLResponse
+        print(url)
         let task = URLSession.shared.dataTask(with: url, completionHandler: { [self]
             data, _, error in
             guard let data = data, error == nil else {
