@@ -11,7 +11,7 @@
         <!--My Anime-->
         <scene sceneID="ODH-MT-2fA">
             <objects>
-                <tableViewController id="Inq-m6-zVy" customClass="AllAnimeListsTableViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Inq-m6-zVy" customClass="AllAnimelistsTableViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="206" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pjj-F2-mjc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Anime" id="DOT-nk-yIr"/>
+                    <connections>
+                        <segue destination="z9y-NK-5Px" kind="show" identifier="ShowAnimelist" id="VaJ-47-7nw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTE-ET-cLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,6 +118,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jez-oE-MFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1262" y="1477"/>
+        </scene>
+        <!--Animelist View Controller-->
+        <scene sceneID="QKX-22-SGz">
+            <objects>
+                <viewController id="z9y-NK-5Px" customClass="AnimelistViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jg0-JM-AWK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ykl-Ou-bZb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bhn-p4-X5f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7x-sC-Gmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2067" y="2265"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Vfe-3G-ZEa">

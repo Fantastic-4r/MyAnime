@@ -26,7 +26,11 @@
 		D2D18038263271E000AC9E6A /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D18037263271E000AC9E6A /* DiscoverViewController.swift */; };
 		DEDDD8CD83C8F04CB604E2A9 /* Pods_My_AnimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5EDF2B1074F767457D9155 /* Pods_My_AnimeTests.framework */; };
 		F88DED681C3571C0DC9CFFD6 /* Pods_My_Anime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A6021C5D12A95159DFC81D /* Pods_My_Anime.framework */; };
+		FC5FBB53263F5EBD00F7779B /* AnimelistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FBB52263F5EBD00F7779B /* AnimelistViewController.swift */; };
 		FC7C7D6A263F03D300CD7179 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C7D69263F03D300CD7179 /* DataModel.swift */; };
+		FC7C7D6C263F043C00CD7179 /* Animelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C7D6B263F043C00CD7179 /* Animelist.swift */; };
+		FC7C7D6E263F059B00CD7179 /* AnimelistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C7D6D263F059B00CD7179 /* AnimelistItem.swift */; };
+		FC7C7D72263F0D5B00CD7179 /* AllAnimelistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C7D71263F0D5B00CD7179 /* AllAnimelistsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +82,11 @@
 		D2D1802726325E3D00AC9E6A /* TopAnimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAnimeTableViewCell.swift; sourceTree = "<group>"; };
 		D2D18037263271E000AC9E6A /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		F14E6AC8C89AC0A0627488C8 /* Pods-My Anime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Anime.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Anime/Pods-My Anime.release.xcconfig"; sourceTree = "<group>"; };
+		FC5FBB52263F5EBD00F7779B /* AnimelistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimelistViewController.swift; sourceTree = "<group>"; };
 		FC7C7D69263F03D300CD7179 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		FC7C7D6B263F043C00CD7179 /* Animelist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animelist.swift; sourceTree = "<group>"; };
+		FC7C7D6D263F059B00CD7179 /* AnimelistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimelistItem.swift; sourceTree = "<group>"; };
+		FC7C7D71263F0D5B00CD7179 /* AllAnimelistsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimelistsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +191,8 @@
 				D236162026320DE9002D44BE /* AnimeFromTop.swift */,
 				D236163626321AE4002D44BE /* TopAnimes.swift */,
 				FC7C7D69263F03D300CD7179 /* DataModel.swift */,
+				FC7C7D6B263F043C00CD7179 /* Animelist.swift */,
+				FC7C7D6D263F059B00CD7179 /* AnimelistItem.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -194,6 +204,8 @@
 				D2D18037263271E000AC9E6A /* DiscoverViewController.swift */,
 				D2AACE852638A89400416CB0 /* SearchResultsViewController.swift */,
 				D2AACE922638CE7400416CB0 /* SearchCell.swift */,
+				FC7C7D71263F0D5B00CD7179 /* AllAnimelistsTableViewController.swift */,
+				FC5FBB52263F5EBD00F7779B /* AnimelistViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -427,11 +439,15 @@
 				D23615C42631EE73002D44BE /* AppDelegate.swift in Sources */,
 				D2D1802826325E3D00AC9E6A /* TopAnimeTableViewCell.swift in Sources */,
 				D236163726321AE4002D44BE /* TopAnimes.swift in Sources */,
+				FC7C7D6C263F043C00CD7179 /* Animelist.swift in Sources */,
 				FC7C7D6A263F03D300CD7179 /* DataModel.swift in Sources */,
 				D236162126320DE9002D44BE /* AnimeFromTop.swift in Sources */,
 				D236163C26321B20002D44BE /* SearchResults.swift in Sources */,
+				FC7C7D72263F0D5B00CD7179 /* AllAnimelistsTableViewController.swift in Sources */,
 				D23615C62631EE73002D44BE /* SceneDelegate.swift in Sources */,
 				D2D18038263271E000AC9E6A /* DiscoverViewController.swift in Sources */,
+				FC7C7D6E263F059B00CD7179 /* AnimelistItem.swift in Sources */,
+				FC5FBB53263F5EBD00F7779B /* AnimelistViewController.swift in Sources */,
 				D2361626263212E2002D44BE /* AnimeFromSearch.swift in Sources */,
 				D2AACE862638A89400416CB0 /* SearchResultsViewController.swift in Sources */,
 			);
