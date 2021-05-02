@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabViewController = window!.rootViewController as! UITabBarController
         let navigationController = tabViewController.viewControllers![0] as! UINavigationController
-        let controller = navigationController.viewControllers[0] as! AllAnimeListsTableViewController
+        let controller = navigationController.viewControllers[0] as! AllAnimelistsTableViewController
         controller.dataModel = dataModel
         
         guard let _ = (scene as? UIWindowScene) else { return }

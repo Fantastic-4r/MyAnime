@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllAnimeListsTableViewController: UITableViewController {
+class AllAnimelistsTableViewController: UITableViewController {
     var dataModel: DataModel!
 
     override func viewDidLoad() {
@@ -18,16 +18,10 @@ class AllAnimeListsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        print(dataModel!.lists)
     }
 
     // MARK: - Table view data source
-/*
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-*/
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModel.lists.count
     }
@@ -50,6 +44,12 @@ class AllAnimeListsTableViewController: UITableViewController {
         
         //cell.imageView!.image = UIImage(named: checklist.iconName)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let animelist = dataModel.lists[indexPath.row]
+        dataModel.indexOfSelectedChecklist = indexPath.row
+        performSegue(withIdentifier: "ShowAnimelist", sender: animelist)
     }
     
 
@@ -88,14 +88,15 @@ class AllAnimeListsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAnimelist" {
+            let controller = segue.destination as! AnimelistViewController
+            controller.animelist = sender as? Animelist
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-
 }

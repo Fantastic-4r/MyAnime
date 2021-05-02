@@ -7,9 +7,9 @@
 
 import Foundation
 
-class AnimeList: NSObject, Codable {
+class Animelist: NSObject, Codable {
     var name = ""
-    var items = [AnimeListItem]()
+    var items = [AnimelistItem]()
     
     init(name: String) {
       self.name = name
