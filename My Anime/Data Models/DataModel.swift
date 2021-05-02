@@ -8,7 +8,7 @@
 import Foundation
 
 class DataModel {
-    var lists = [AnimeList]()
+    var lists = [Animelist]()
     
     var indexOfSelectedChecklist: Int {
         get {
@@ -34,9 +34,9 @@ class DataModel {
         let firstTime = userDefaults.bool(forKey: "FirstTime")
         
         if firstTime {
-            let animelist = AnimeList(name: "Watching")
-            let animelist2 = AnimeList(name: "To Watch")
-            let animelist3 = AnimeList(name: "Watched")
+            let animelist = Animelist(name: "Watching")
+            let animelist2 = Animelist(name: "To Watch")
+            let animelist3 = Animelist(name: "Watched")
             lists.append(animelist)
             lists.append(animelist2)
             lists.append(animelist3)
@@ -69,7 +69,7 @@ class DataModel {
         if let data = try? Data(contentsOf: path) {
             let decoder = PropertyListDecoder()
             do {
-                lists = try decoder.decode([AnimeList].self, from: data)
+                lists = try decoder.decode([Animelist].self, from: data)
                 if(lists.count != 0) {
                     UserDefaults.standard.set(false, forKey: "FirstTime")
                 }

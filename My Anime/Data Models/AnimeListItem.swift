@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AnimeListItem: Codable {
+struct AnimelistItem: Codable {
     let mal_id: Int
     let rank: Int
     let title: String
