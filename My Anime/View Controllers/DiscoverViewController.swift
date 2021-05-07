@@ -123,7 +123,8 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         //this function .af.setImage(withURL: URL) from the pod AlomofireImage downloads the images from the imgURL and sets it to the UIImageView.
         cell.TopImage.af.setImage(withURL: imgURL)
         
+        
         return cell
     }
-    
+     
 }

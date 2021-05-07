@@ -54,71 +54,6 @@
             </objects>
             <point key="canvasLocation" x="-2062.3188405797105" y="1476.5625"/>
         </scene>
-        <!--My Anime-->
-        <scene sceneID="gdP-hU-NLd">
-            <objects>
-                <viewController id="yVk-9v-SDA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="74y-RM-3Ol">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOf-QI-sTe">
-                                <rect key="frame" x="0.0" y="135" width="414" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-XU-60n">
-                                        <rect key="frame" x="140" y="56" width="134" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-td-mX0">
-                                <rect key="frame" x="0.0" y="353" width="414" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In6-rA-rbh">
-                                        <rect key="frame" x="143" y="66" width="129" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uV-ir-Ffo">
-                                <rect key="frame" x="0.0" y="571" width="414" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watched" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BH2-km-df3">
-                                        <rect key="frame" x="144" y="66" width="126" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="h1U-5a-WnF"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="My Anime" id="GYX-Yg-Aif"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="YOm-X9-Fez" kind="presentation" identifier="AddToWatching" id="3rj-Ab-8LK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jez-oE-MFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1262" y="1477"/>
-        </scene>
         <!--Animelist View Controller-->
         <scene sceneID="QKX-22-SGz">
             <objects>
@@ -135,22 +70,6 @@
             </objects>
             <point key="canvasLocation" x="-2067" y="2265"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Vfe-3G-ZEa">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YOm-X9-Fez" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PYW-MI-k9L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="TQe-KO-HfG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="OWS-xb-6zr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ljG-UN-xor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1262" y="2247"/>
-        </scene>
         <!--Discover-->
         <scene sceneID="dad-y5-oEe">
             <objects>
@@ -161,7 +80,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-SG-rq1">
                                 <rect key="frame" x="0.0" y="191" width="414" height="705"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="TopCell" rowHeight="153" id="Gcn-2q-Hly" customClass="TopAnimeTableViewCell" customModule="My_Anime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
@@ -174,29 +93,48 @@
                                                     <rect key="frame" x="8" y="7" width="115" height="139"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-Lq-dl3">
-                                                    <rect key="frame" x="135" y="7" width="271" height="87"/>
+                                                    <rect key="frame" x="135" y="7" width="271" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="D50-PQ-1fh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-9M-gGd" userLabel="listButton">
+                                                    <rect key="frame" x="359" y="122" width="30" height="30"/>
+                                                    <state key="normal" image="add-list"/>
+                                                    <connections>
+                                                        <action selector="addAnime:" destination="Gcn-2q-Hly" eventType="touchUpInside" id="VGp-x1-qZT"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yX6-8g-m7p" userLabel="favButton">
+                                                    <rect key="frame" x="324" y="122" width="30" height="30"/>
+                                                    <state key="normal" image="favor-icon"/>
+                                                    <connections>
+                                                        <action selector="favAnime:" destination="Gcn-2q-Hly" eventType="touchUpInside" id="Z2u-Nr-DCL"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yX6-8g-m7p" firstAttribute="bottom" secondItem="xhN-ht-Qzn" secondAttribute="bottomMargin" constant="10" id="Dnq-O2-kH8"/>
                                                 <constraint firstItem="vz4-oj-sPX" firstAttribute="top" secondItem="xhN-ht-Qzn" secondAttribute="topMargin" constant="-4" id="HYk-G9-Ray"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3QB-9M-gGd" secondAttribute="trailing" constant="5" id="ORA-Gs-dqj"/>
+                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="leading" secondItem="yX6-8g-m7p" secondAttribute="trailing" constant="5" id="Rog-yP-eOr"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="vz4-oj-sPX" secondAttribute="bottom" constant="-4" id="Zvk-VP-agp"/>
                                                 <constraint firstItem="Mb2-Lq-dl3" firstAttribute="trailing" secondItem="xhN-ht-Qzn" secondAttribute="trailingMargin" constant="12" id="ed3-Aa-ebM"/>
                                                 <constraint firstItem="Mb2-Lq-dl3" firstAttribute="leading" secondItem="vz4-oj-sPX" secondAttribute="trailing" constant="12" id="hOq-Nj-66v"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Mb2-Lq-dl3" secondAttribute="bottom" constant="48" id="seH-qg-rzH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mb2-Lq-dl3" secondAttribute="bottom" constant="101" id="seH-qg-rzH"/>
                                                 <constraint firstItem="vz4-oj-sPX" firstAttribute="leading" secondItem="xhN-ht-Qzn" secondAttribute="leadingMargin" constant="-12" id="vYl-nv-aZY"/>
                                                 <constraint firstItem="Mb2-Lq-dl3" firstAttribute="top" secondItem="xhN-ht-Qzn" secondAttribute="topMargin" constant="-4" id="x2p-Be-Ika"/>
+                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="bottom" secondItem="xhN-ht-Qzn" secondAttribute="bottomMargin" constant="10" id="yVa-Cc-0r1"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="TopAnimeTitle" destination="Mb2-Lq-dl3" id="Osu-JU-Qkn"/>
                                             <outlet property="TopImage" destination="vz4-oj-sPX" id="mgb-hN-ncd"/>
+                                            <outlet property="favButton" destination="yX6-8g-m7p" id="Jv3-wg-n4j"/>
+                                            <outlet property="listButton" destination="3QB-9M-gGd" id="C0o-aM-0pk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -208,12 +146,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Animes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-zW-apx">
                                 <rect key="frame" x="20" y="154" width="131" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n8Z-oM-kU3"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dBN-SG-rq1" firstAttribute="trailing" secondItem="n8Z-oM-kU3" secondAttribute="trailing" id="5Si-M4-cSd"/>
                             <constraint firstItem="n8Z-oM-kU3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mPq-zW-apx" secondAttribute="trailing" symbolic="YES" id="BHk-NU-Vka"/>
@@ -255,7 +192,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYe-GR-mHW">
                                                     <rect key="frame" x="152" y="11" width="251" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-f6-3e3">
@@ -263,7 +200,6 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="CVP-f6-3e3" firstAttribute="top" secondItem="BP2-K9-XHW" secondAttribute="topMargin" constant="-9" id="JTZ-lE-Rbo"/>
                                                 <constraint firstAttribute="trailing" secondItem="lYe-GR-mHW" secondAttribute="trailing" constant="11" id="Usj-l6-kGR"/>
@@ -363,25 +299,6 @@
             </objects>
             <point key="canvasLocation" x="667" y="-55"/>
         </scene>
-        <!--My Anime-->
-        <scene sceneID="D3A-J2-72z">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fGh-bI-tjE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Anime" image="tv" catalog="system" id="3gL-bP-ugS"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cw9-ZB-cXx">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yVk-9v-SDA" kind="relationship" relationship="rootViewController" id="SJk-mc-Bes"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g7h-tv-9WH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1262" y="777"/>
-        </scene>
         <!--Discover -->
         <scene sceneID="ctg-RB-Agl">
             <objects>
@@ -441,12 +358,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add-list" width="30" height="30"/>
+        <image name="favor-icon" width="30" height="30"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="tv" catalog="system" width="128" height="97"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
