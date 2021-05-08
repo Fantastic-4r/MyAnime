@@ -30,6 +30,7 @@ MyAnime allows users to keep track of the animes they are watching, have already
 
 * [x] User can view a list of popular animes
 * [x] User can search for an anime
+* [x] User can see an app icon and a launch screen
 * [ ] User can add an anime from search results to their Watching list
 * [ ] User can add an anime from search results to their Watched list.
 * [ ] User can add an anime from search results to their To Watch list.
@@ -172,3 +173,8 @@ Optional:
 
 ### User can press a "add to list" button and be presented with an action sheet to choose which list
 ![](http://g.recordit.co/xtQd9qC3mc.gif)
+
+### User can see an app icon and a launch screen
+![](https://i.imgur.com/RoqWE7y.gif)
+
+
