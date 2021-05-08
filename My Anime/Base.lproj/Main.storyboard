@@ -38,6 +38,9 @@
                                         <constraint firstItem="ybN-iw-7kr" firstAttribute="leading" secondItem="5Wu-aD-euU" secondAttribute="leadingMargin" constant="20" id="PFt-GL-O69"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="aXc-be-uYD" kind="show" identifier="ShowAnimelist" id="gxn-7E-kJq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,29 +49,39 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Anime" id="DOT-nk-yIr"/>
-                    <connections>
-                        <segue destination="z9y-NK-5Px" kind="show" identifier="ShowAnimelist" id="VaJ-47-7nw"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTE-ET-cLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2062.3188405797105" y="1476.5625"/>
+            <point key="canvasLocation" x="-630" y="1527"/>
         </scene>
         <!--Animelist View Controller-->
-        <scene sceneID="QKX-22-SGz">
+        <scene sceneID="OWm-PJ-rcI">
             <objects>
-                <viewController id="z9y-NK-5Px" customClass="AnimelistViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jg0-JM-AWK">
+                <tableViewController storyboardIdentifier="ShowAnimelist" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aXc-be-uYD" customClass="AnimelistViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1i9-wT-scf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ykl-Ou-bZb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bhn-p4-X5f"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e7x-sC-Gmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Animelistitem" id="alr-uC-aoV">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alr-uC-aoV" id="bGA-jO-SWe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aXc-be-uYD" id="z00-Aw-YIa"/>
+                            <outlet property="delegate" destination="aXc-be-uYD" id="C0D-LL-Nsh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MDh-Tf-JEQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KlE-MA-bah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2067" y="2265"/>
+            <point key="canvasLocation" x="-630" y="2308"/>
         </scene>
         <!--Discover-->
         <scene sceneID="dad-y5-oEe">
@@ -168,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6U-UI-1UP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8115942028987" y="1527.4553571428571"/>
+            <point key="canvasLocation" x="667" y="1527"/>
         </scene>
         <!--Search Results View Controller-->
         <scene sceneID="gxL-M8-sRz">
@@ -239,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26h-8b-6jy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.5797101449275" y="1527.4553571428571"/>
+            <point key="canvasLocation" x="1964" y="1527"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="q4P-LM-ebV">
@@ -277,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDk-M6-7QS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3360.8695652173915" y="776.78571428571422"/>
+            <point key="canvasLocation" x="3019" y="777"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Hfd-eK-HAB">
@@ -335,7 +348,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yl8-cV-mK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2519" y="777"/>
+            <point key="canvasLocation" x="1964" y="777"/>
         </scene>
         <!--My Anime-->
         <scene sceneID="8fB-Gg-8is">
@@ -354,7 +367,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9V9-w6-9y8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2062" y="777"/>
+            <point key="canvasLocation" x="-630" y="777"/>
         </scene>
     </scenes>
     <resources>

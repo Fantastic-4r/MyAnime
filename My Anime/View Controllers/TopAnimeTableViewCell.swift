@@ -8,7 +8,11 @@
 import UIKit
 
 class TopAnimeTableViewCell: UITableViewCell {
-
+    
+    weak var viewController: UIViewController?
+    var animeId: Int = 0
+    var animelist: Animelist!
+    
     @IBOutlet weak var TopImage: UIImageView!
     @IBOutlet weak var TopAnimeTitle: UILabel!
     
@@ -20,17 +24,41 @@ class TopAnimeTableViewCell: UITableViewCell {
     }
     
     @IBAction func addAnime(_ sender: Any) {
+        // 1
+        let optionMenu = UIAlertController(title: nil, message: "Select A List", preferredStyle: .actionSheet)
+                
+        // 2
+        let watchingAction = UIAlertAction(title: "Watching", style: .default) { UIAlertAction in
+            //animelist.items.append(AnimelistItem(mal_id: animeId))
+            print(self.animeId)
+        }
+        let toWatchAction = UIAlertAction(title: "To Watch", style: .default) { UIAlertAction in
+            //animelist.items.append(AnimelistItem(mal_id: animeId))
+            print(self.animeId)
+        }
+        let watcehdAction = UIAlertAction(title: "Watched", style: .default) { UIAlertAction in
+            //animelist.items.append(AnimelistItem(mal_id: animeId))
+            print(self.animeId)
+        }
+                
+        // 3
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                
+        // 4
+        optionMenu.addAction(watchingAction)
+        optionMenu.addAction(toWatchAction)
+        optionMenu.addAction(watcehdAction)
+        optionMenu.addAction(cancelAction)
+                
+        // 5
+        viewController?.present(optionMenu, animated: true, completion: nil)
     }
+        
+    
     
     var favorited:Bool = false
     func setFavorite(_ isFavorited:Bool) {
-        favorited = isFavorited
-        if (favorited) {
-            favButton.setImage(UIImage(named:"favor-icon-filled"), for: UIControl.State.normal )
-        }
-        else {
-            favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal )
-        }
+        
     }
     
     override func awakeFromNib() {
