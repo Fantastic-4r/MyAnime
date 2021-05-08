@@ -7,11 +7,12 @@
 
 import UIKit
 
-class AnimelistViewController: UIViewController {
+class AnimelistViewController: UITableViewController {
     var animelist: Animelist!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
         title = animelist.name
 
         // Do any additional setup after loading the view.
@@ -27,5 +28,27 @@ class AnimelistViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return animelist.items.count
+      }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Animelistitem", for: indexPath)
+        let item = animelist.items[indexPath.row]
+        
+        configureText(for: cell, with: item)
+        
+        return cell
+      }
+    
+    func configureText(for cell: UITableViewCell, with item: AnimelistItem) {
+        let label = cell.viewWithTag(1000) as! UILabel
+        label.text = item.title
+      }
+    
+    
+    
 
 }
