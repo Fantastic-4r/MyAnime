@@ -117,7 +117,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         let animeId = anime.mal_id
         
         cell.TopAnimeTitle.text = title
-        cell.animeID = animeId
+        cell.animeId = animeId
         
     
         
