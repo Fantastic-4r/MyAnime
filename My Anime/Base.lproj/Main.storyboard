@@ -38,9 +38,6 @@
                                         <constraint firstItem="ybN-iw-7kr" firstAttribute="leading" secondItem="5Wu-aD-euU" secondAttribute="leadingMargin" constant="20" id="PFt-GL-O69"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="aXc-be-uYD" kind="show" identifier="ShowAnimelist" id="gxn-7E-kJq"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,6 +46,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Anime" id="DOT-nk-yIr"/>
+                    <connections>
+                        <segue destination="aXc-be-uYD" kind="show" identifier="ShowAnimelist" id="8uy-95-Q8S"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTE-ET-cLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Animelistitem" id="alr-uC-aoV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimelistItem" id="alr-uC-aoV">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alr-uC-aoV" id="bGA-jO-SWe">

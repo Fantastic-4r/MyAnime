@@ -12,6 +12,7 @@ class AnimelistViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet var tableView: AnimelistViewController!
     
     var animelist: Animelist!
+    var topAnime: Animelist!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,7 @@ class AnimelistViewController: UIViewController, UITableViewDataSource, UITableV
     
     func assignArray() {
         let otherVC = TopAnimeTableViewCell()
-        animelist = otherVC.animelist
+        topAnime = otherVC.animelist
     }
     
 
