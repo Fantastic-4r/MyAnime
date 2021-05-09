@@ -17,9 +17,9 @@ class Animelist: NSObject, Codable {
     }
     
     //check how many animes have been checked off
-    func countUncheckedItems() -> Int {
-      return items.reduce(0) {
-        cnt, item in cnt + (item.checked ? 0 : 1)
-      }
-    }
+//    func countUncheckedItems() -> Int {
+//      return items.reduce(0) {
+//        cnt, item in cnt + (item.checked ? 0 : 1)
+//      }
+//    }
 }

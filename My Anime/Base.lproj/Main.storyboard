@@ -63,13 +63,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimelistItem" id="alr-uC-aoV">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="AnimelistItemCell" rowHeight="153" id="Q70-JS-09C" customClass="TopAnimeTableViewCell" customModule="My_Anime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alr-uC-aoV" id="bGA-jO-SWe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q70-JS-09C" id="TxO-pr-gzT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode 1000/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2to-FA-YhS">
+                                            <rect key="frame" x="135" y="126" width="217" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmW-OI-RaZ">
+                                            <rect key="frame" x="135" y="7" width="271" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="RLm-3L-1XB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-V2-mY1" userLabel="favButton">
+                                            <rect key="frame" x="368" y="122" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Nhh-97-e5p"/>
+                                                <constraint firstAttribute="height" constant="30" id="gmQ-0G-4Kv"/>
+                                            </constraints>
+                                            <state key="normal" image="favor-icon"/>
+                                            <connections>
+                                                <action selector="favAnime:" destination="Q70-JS-09C" eventType="touchUpInside" id="fOR-eP-vZ1"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1003" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z9L-sA-Ijq">
+                                            <rect key="frame" x="8" y="7" width="115" height="139"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Z9L-sA-Ijq" firstAttribute="top" secondItem="TxO-pr-gzT" secondAttribute="topMargin" constant="-4" id="2dK-60-xVF"/>
+                                        <constraint firstItem="fe7-V2-mY1" firstAttribute="leading" secondItem="2to-FA-YhS" secondAttribute="trailing" constant="16" id="8Xz-WW-lpy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Z9L-sA-Ijq" secondAttribute="bottom" constant="-4" id="8b5-MX-Z9g"/>
+                                        <constraint firstAttribute="bottom" secondItem="2to-FA-YhS" secondAttribute="bottom" constant="6" id="APR-zU-6nX"/>
+                                        <constraint firstItem="fe7-V2-mY1" firstAttribute="bottom" secondItem="TxO-pr-gzT" secondAttribute="bottomMargin" constant="10" id="BH4-x9-4yo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hmW-OI-RaZ" secondAttribute="bottom" constant="101" id="Ntj-yB-6jZ"/>
+                                        <constraint firstItem="hmW-OI-RaZ" firstAttribute="leading" secondItem="Z9L-sA-Ijq" secondAttribute="trailing" constant="12" id="Oxp-2Z-2we"/>
+                                        <constraint firstItem="Z9L-sA-Ijq" firstAttribute="leading" secondItem="TxO-pr-gzT" secondAttribute="leadingMargin" constant="-12" id="f4f-D4-yXV"/>
+                                        <constraint firstAttribute="trailing" secondItem="fe7-V2-mY1" secondAttribute="trailing" constant="16" id="hq0-xG-DIh"/>
+                                        <constraint firstItem="2to-FA-YhS" firstAttribute="leading" secondItem="Z9L-sA-Ijq" secondAttribute="trailing" constant="12" id="lIB-As-QYq"/>
+                                        <constraint firstItem="hmW-OI-RaZ" firstAttribute="trailing" secondItem="TxO-pr-gzT" secondAttribute="trailingMargin" constant="12" id="mmg-s7-eQB"/>
+                                        <constraint firstItem="2to-FA-YhS" firstAttribute="top" secondItem="hmW-OI-RaZ" secondAttribute="bottom" constant="85" id="qd6-mf-e3g"/>
+                                        <constraint firstItem="hmW-OI-RaZ" firstAttribute="top" secondItem="TxO-pr-gzT" secondAttribute="topMargin" constant="-4" id="tKx-Mi-2cr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="TopAnimeTitle" destination="hmW-OI-RaZ" id="GtS-mS-QcK"/>
+                                    <outlet property="TopImage" destination="Z9L-sA-Ijq" id="H9G-iK-Nse"/>
+                                    <outlet property="favButton" destination="fe7-V2-mY1" id="T4V-5y-MQb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -81,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlE-MA-bah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630" y="2308"/>
+            <point key="canvasLocation" x="-630.43478260869574" y="2307.5892857142858"/>
         </scene>
         <!--Discover-->
         <scene sceneID="dad-y5-oEe">

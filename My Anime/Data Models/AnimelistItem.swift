@@ -8,11 +8,11 @@
 import Foundation
 
 struct AnimelistItem: Codable {
-    let mal_id: Int
-    let rank: Int
-    let title: String
-    let image_url: String
-    let episodes: Int?
+    var mal_id: Int = 0
+    var rank: Int = 0
+    var title: String = ""
+    var image_url: String = ""
+    var episodes: Int? = 0
     var checked = false
     
     internal init(mal_id: Int, rank: Int, title: String, image_url: String, episodes: Int?, checked: Bool) {
