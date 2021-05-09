@@ -114,8 +114,12 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         let anime = topAnimes.top[indexPath.row]
         let title = anime.title
-        cell.TopAnimeTitle.text = title
+        let animeId = anime.mal_id
         
+        cell.TopAnimeTitle.text = title
+        cell.animeId = animeId
+        
+    
         
         let imgUrlString = anime.image_url //image url in string
         let imgURL = URL(string: imgUrlString)! //convert the image url from string to url so that we can download it. Since imgURL is an optional type, must unwrap it so use force-unwrap using '!' to abort execution if the optional value contains 'nil'
@@ -123,7 +127,8 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         //this function .af.setImage(withURL: URL) from the pod AlomofireImage downloads the images from the imgURL and sets it to the UIImageView.
         cell.TopImage.af.setImage(withURL: imgURL)
         
+        cell.viewController = self
         return cell
     }
-    
+     
 }

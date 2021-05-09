@@ -14,4 +14,13 @@ struct AnimelistItem: Codable {
     let image_url: String
     let episodes: Int?
     var checked = false
+    
+    internal init(mal_id: Int, rank: Int, title: String, image_url: String, episodes: Int?, checked: Bool) {
+        self.mal_id = mal_id
+        self.rank = rank
+        self.title = title
+        self.image_url = image_url
+        self.episodes = episodes
+        self.checked = checked
+    }
 }
