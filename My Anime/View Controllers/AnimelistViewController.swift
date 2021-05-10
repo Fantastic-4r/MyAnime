@@ -28,18 +28,21 @@ class AnimelistViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimelistItem", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimelistItemCell", for: indexPath)
         
         let item = animelist.items[indexPath.row]
         
-        configureText(for: cell, with: item)
+        configureCell(for: cell, with: item)
 
         return cell
     }
     
-    func configureText(for cell: UITableViewCell, with item: AnimelistItem) {
+    func configureCell(for cell: UITableViewCell, with item: AnimelistItem) {
       let label = cell.viewWithTag(1000) as! UILabel
+        let image = cell.viewWithTag(1003) as! UIImageView
       label.text = item.title
+        let imgURL = URL(string: item.image_url)
+        image.af.setImage(withURL: imgURL!)
     }
     
     func assignArray() {

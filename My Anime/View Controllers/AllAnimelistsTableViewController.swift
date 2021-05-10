@@ -8,10 +8,36 @@
 import UIKit
 
 class AllAnimelistsTableViewController: UITableViewController {
+
     var dataModel: DataModel!
+    
+    var observer: NSObjectProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        observer = NotificationCenter.default.addObserver(
+            forName: Notification.Name("addItem"),
+            object: nil,
+            queue: .main,
+            using:
+                { notification in
+                    guard let object = notification.object as? [String: Any] else {
+                        return
+                    }
+                    
+                    guard let item = object["item"] else {
+                        return
+                    }
+                    
+                    guard let index = object["index"] else {
+                        return
+                    }
+                    
+                    print(item as! AnimelistItem)
+                    
+                    self.dataModel.lists[index as! Int].items.append(item as! AnimelistItem)
+                })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,15 +60,7 @@ class AllAnimelistsTableViewController: UITableViewController {
         let animeList = dataModel.lists[indexPath.row]
         
         label.text = animeList.name
-//        cell.accessoryType = .detailDisclosureButton
-//        let count = checklist.countUncheckedItems()
-//        if checklist.items.count == 0 {
-//          cell.detailTextLabel!.text = "(No Items)"
-//        } else {
-//          cell.detailTextLabel!.text = count == 0 ? "All Done" : "\(count) Remaining"
-//        }
         
-        //cell.imageView!.image = UIImage(named: checklist.iconName)
         return cell
     }
     
@@ -51,6 +69,13 @@ class AllAnimelistsTableViewController: UITableViewController {
         dataModel.indexOfSelectedChecklist = indexPath.row
         performSegue(withIdentifier: "ShowAnimelist", sender: animelist)
     }
+    
+    // MARK: - List Detail View Controller Delegates
+//    func addAnimeItem(index: Int, animelist: AnimelistItem) {
+//        dataModel.lists[index].items.append(animelist)
+//        //        dataModel.lists[index].items.sortChecklists()
+//        tableView.reloadData()
+//    }
     
 
     /*
