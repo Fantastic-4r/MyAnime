@@ -33,10 +33,10 @@ class TopAnimeTableViewCell: UITableViewCell {
             NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 0])
         }
         let toWatchAction = UIAlertAction(title: "To Watch", style: .default) { UIAlertAction in
-            NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 2])
-        }
-        let watcehdAction = UIAlertAction(title: "Watched", style: .default) { UIAlertAction in
             NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 1])
+        }
+        let watchedAction = UIAlertAction(title: "Watched", style: .default) { UIAlertAction in
+            NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 2])
         }
                 
         // 3
@@ -45,7 +45,7 @@ class TopAnimeTableViewCell: UITableViewCell {
         // 4
         optionMenu.addAction(watchingAction)
         optionMenu.addAction(toWatchAction)
-        optionMenu.addAction(watcehdAction)
+        optionMenu.addAction(watchedAction)
         optionMenu.addAction(cancelAction)
                 
         // 5

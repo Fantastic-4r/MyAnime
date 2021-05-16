@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5H-gw-RB4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5H-gw-RB4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,24 +13,31 @@
         <scene sceneID="ODH-MT-2fA">
             <objects>
                 <tableViewController id="Inq-m6-zVy" customClass="AllAnimelistsTableViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="206" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pjj-F2-mjc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="244" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pjj-F2-mjc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <inset key="separatorInset" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimeListCell" rowHeight="206" id="TCn-ls-CSS">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="206"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimeListCell" rowHeight="244" id="TCn-ls-CSS">
+                                <rect key="frame" x="0.0" y="28" width="414" height="244"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCn-ls-CSS" id="5Wu-aD-euU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="206"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-iw-7kr">
-                                            <rect key="frame" x="40" y="31" width="334" height="144"/>
+                                            <rect key="frame" x="40" y="31" width="334" height="182"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omE-mi-pbs">
+                                            <rect key="frame" x="0.0" y="236" width="414" height="8"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="ybN-iw-7kr" secondAttribute="bottom" constant="20" id="4df-WJ-prb"/>
@@ -38,6 +46,8 @@
                                         <constraint firstItem="ybN-iw-7kr" firstAttribute="leading" secondItem="5Wu-aD-euU" secondAttribute="leadingMargin" constant="20" id="PFt-GL-O69"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,19 +62,19 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTE-ET-cLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630" y="1527"/>
+            <point key="canvasLocation" x="-630.43478260869574" y="1526.7857142857142"/>
         </scene>
         <!--Animelist View Controller-->
         <scene sceneID="OWm-PJ-rcI">
             <objects>
                 <tableViewController storyboardIdentifier="ShowAnimelist" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aXc-be-uYD" customClass="AnimelistViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1i9-wT-scf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1i9-wT-scf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="AnimelistItemCell" rowHeight="153" id="Q70-JS-09C" customClass="TopAnimeTableViewCell" customModule="My_Anime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="153"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q70-JS-09C" id="TxO-pr-gzT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
@@ -73,7 +83,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode 1000/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2to-FA-YhS">
                                             <rect key="frame" x="135" y="126" width="217" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmW-OI-RaZ">
@@ -82,7 +92,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="RLm-3L-1XB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-V2-mY1" userLabel="favButton">
@@ -91,7 +101,8 @@
                                                 <constraint firstAttribute="width" constant="30" id="Nhh-97-e5p"/>
                                                 <constraint firstAttribute="height" constant="30" id="gmQ-0G-4Kv"/>
                                             </constraints>
-                                            <state key="normal" image="favor-icon"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="heart" catalog="system"/>
                                             <connections>
                                                 <action selector="favAnime:" destination="Q70-JS-09C" eventType="touchUpInside" id="fOR-eP-vZ1"/>
                                             </connections>
@@ -100,6 +111,7 @@
                                             <rect key="frame" x="8" y="7" width="115" height="139"/>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Z9L-sA-Ijq" firstAttribute="top" secondItem="TxO-pr-gzT" secondAttribute="topMargin" constant="-4" id="2dK-60-xVF"/>
                                         <constraint firstItem="fe7-V2-mY1" firstAttribute="leading" secondItem="2to-FA-YhS" secondAttribute="trailing" constant="16" id="8Xz-WW-lpy"/>
@@ -144,54 +156,70 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-SG-rq1">
                                 <rect key="frame" x="0.0" y="191" width="414" height="705"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="TopCell" rowHeight="153" id="Gcn-2q-Hly" customClass="TopAnimeTableViewCell" customModule="My_Anime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gcn-2q-Hly" id="xhN-ht-Qzn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vz4-oj-sPX">
-                                                    <rect key="frame" x="8" y="7" width="115" height="139"/>
+                                                    <rect key="frame" x="8" y="7" width="113.5" height="139"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="113.5" id="R3j-Re-XDm"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-Lq-dl3">
-                                                    <rect key="frame" x="135" y="7" width="271" height="34"/>
+                                                    <rect key="frame" x="130.5" y="0.0" width="271" height="61"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="D50-PQ-1fh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-9M-gGd" userLabel="listButton">
-                                                    <rect key="frame" x="359" y="122" width="30" height="30"/>
-                                                    <state key="normal" image="add-list"/>
-                                                    <connections>
-                                                        <action selector="addAnime:" destination="Gcn-2q-Hly" eventType="touchUpInside" id="VGp-x1-qZT"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yX6-8g-m7p" userLabel="favButton">
-                                                    <rect key="frame" x="324" y="122" width="30" height="30"/>
-                                                    <state key="normal" image="favor-icon"/>
+                                                    <rect key="frame" x="210" y="127" width="80.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Favorite" image="heart" catalog="system"/>
                                                     <connections>
                                                         <action selector="favAnime:" destination="Gcn-2q-Hly" eventType="touchUpInside" id="Z2u-Nr-DCL"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-9M-gGd" userLabel="listButton">
+                                                    <rect key="frame" x="298" y="126" width="96" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="aar-nz-Cur"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Add to list" image="text.badge.plus" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="addAnime:" destination="Gcn-2q-Hly" eventType="touchUpInside" id="VGp-x1-qZT"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="yX6-8g-m7p" firstAttribute="bottom" secondItem="xhN-ht-Qzn" secondAttribute="bottomMargin" constant="10" id="Dnq-O2-kH8"/>
+                                                <constraint firstItem="yX6-8g-m7p" firstAttribute="centerY" secondItem="3QB-9M-gGd" secondAttribute="centerY" id="CSS-6z-kup"/>
                                                 <constraint firstItem="vz4-oj-sPX" firstAttribute="top" secondItem="xhN-ht-Qzn" secondAttribute="topMargin" constant="-4" id="HYk-G9-Ray"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3QB-9M-gGd" secondAttribute="trailing" constant="5" id="ORA-Gs-dqj"/>
-                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="leading" secondItem="yX6-8g-m7p" secondAttribute="trailing" constant="5" id="Rog-yP-eOr"/>
+                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="top" secondItem="Mb2-Lq-dl3" secondAttribute="bottom" constant="65" id="Mff-97-Eep"/>
+                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="leading" secondItem="vz4-oj-sPX" secondAttribute="trailing" constant="9" id="QuL-r2-n1G"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="vz4-oj-sPX" secondAttribute="bottom" constant="-4" id="Zvk-VP-agp"/>
-                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="trailing" secondItem="xhN-ht-Qzn" secondAttribute="trailingMargin" constant="12" id="ed3-Aa-ebM"/>
-                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="leading" secondItem="vz4-oj-sPX" secondAttribute="trailing" constant="12" id="hOq-Nj-66v"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Mb2-Lq-dl3" secondAttribute="bottom" constant="101" id="seH-qg-rzH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yX6-8g-m7p" secondAttribute="bottom" constant="-3" id="daQ-4j-P4w"/>
+                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhN-ht-Qzn" secondAttribute="trailingMargin" id="ed3-Aa-ebM"/>
+                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vz4-oj-sPX" secondAttribute="trailing" id="hOq-Nj-66v"/>
+                                                <constraint firstItem="yX6-8g-m7p" firstAttribute="top" secondItem="Mb2-Lq-dl3" secondAttribute="bottom" constant="66" id="m8p-eQ-fDS"/>
+                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="trailing" secondItem="xhN-ht-Qzn" secondAttribute="trailingMargin" id="pFB-cj-xhv"/>
+                                                <constraint firstItem="yX6-8g-m7p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vz4-oj-sPX" secondAttribute="trailing" constant="8" symbolic="YES" id="s3t-0m-flj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mb2-Lq-dl3" secondAttribute="bottom" constant="81" id="seH-qg-rzH"/>
                                                 <constraint firstItem="vz4-oj-sPX" firstAttribute="leading" secondItem="xhN-ht-Qzn" secondAttribute="leadingMargin" constant="-12" id="vYl-nv-aZY"/>
-                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="top" secondItem="xhN-ht-Qzn" secondAttribute="topMargin" constant="-4" id="x2p-Be-Ika"/>
-                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="bottom" secondItem="xhN-ht-Qzn" secondAttribute="bottomMargin" constant="10" id="yVa-Cc-0r1"/>
+                                                <constraint firstItem="Mb2-Lq-dl3" firstAttribute="top" secondItem="xhN-ht-Qzn" secondAttribute="topMargin" constant="-11" id="x2p-Be-Ika"/>
+                                                <constraint firstItem="3QB-9M-gGd" firstAttribute="leading" secondItem="yX6-8g-m7p" secondAttribute="trailing" constant="7.5" id="xhw-7X-bk3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -210,11 +238,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Animes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-zW-apx">
                                 <rect key="frame" x="20" y="154" width="131" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n8Z-oM-kU3"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dBN-SG-rq1" firstAttribute="trailing" secondItem="n8Z-oM-kU3" secondAttribute="trailing" id="5Si-M4-cSd"/>
                             <constraint firstItem="n8Z-oM-kU3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mPq-zW-apx" secondAttribute="trailing" symbolic="YES" id="BHk-NU-Vka"/>
@@ -232,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6U-UI-1UP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="667" y="1527"/>
+            <point key="canvasLocation" x="666.66666666666674" y="1526.7857142857142"/>
         </scene>
         <!--Search Results View Controller-->
         <scene sceneID="gxL-M8-sRz">
@@ -247,36 +276,74 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchResultsCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="153" id="qP8-uh-DV5" customClass="SearchCell" customModule="My_Anime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qP8-uh-DV5" id="BP2-K9-XHW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYe-GR-mHW">
-                                                    <rect key="frame" x="152" y="11" width="251" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYe-GR-mHW">
+                                                    <rect key="frame" x="131" y="11" width="264" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="WA4-Ff-jSe"/>
+                                                        <constraint firstAttribute="width" constant="264" id="iho-FC-I5E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-f6-3e3">
-                                                    <rect key="frame" x="11" y="2" width="126" height="151"/>
+                                                    <rect key="frame" x="8" y="8" width="115" height="139"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-hf-iBs">
+                                                    <rect key="frame" x="317" y="115" width="91" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="6TP-RU-coe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Add to list">
+                                                        <imageReference key="image" image="text.badge.plus" catalog="system" symbolScale="large"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onAdd:" destination="qP8-uh-DV5" eventType="touchUpInside" id="hBX-WH-TCF"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-k0-hGF">
+                                                    <rect key="frame" x="226" y="119.5" width="83" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="kYI-85-Nde"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Favorite" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="onFavorite:" destination="qP8-uh-DV5" eventType="touchUpInside" id="gSn-sG-zD4"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="CVP-f6-3e3" firstAttribute="top" secondItem="BP2-K9-XHW" secondAttribute="topMargin" constant="-9" id="JTZ-lE-Rbo"/>
-                                                <constraint firstAttribute="trailing" secondItem="lYe-GR-mHW" secondAttribute="trailing" constant="11" id="Usj-l6-kGR"/>
-                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="leading" secondItem="CVP-f6-3e3" secondAttribute="trailing" constant="15" id="bwE-xJ-1QI"/>
-                                                <constraint firstItem="CVP-f6-3e3" firstAttribute="leading" secondItem="BP2-K9-XHW" secondAttribute="leadingMargin" constant="-9" id="eY9-JO-chT"/>
+                                                <constraint firstItem="CB1-hf-iBs" firstAttribute="bottom" secondItem="BP2-K9-XHW" secondAttribute="bottomMargin" id="0il-ug-8lD"/>
+                                                <constraint firstAttribute="trailing" secondItem="CB1-hf-iBs" secondAttribute="trailing" constant="6" id="A6f-I4-sBA"/>
+                                                <constraint firstItem="CB1-hf-iBs" firstAttribute="top" secondItem="lYe-GR-mHW" secondAttribute="bottom" constant="38" id="HcO-G0-xdY"/>
+                                                <constraint firstItem="CVP-f6-3e3" firstAttribute="top" secondItem="BP2-K9-XHW" secondAttribute="topMargin" constant="-3" id="JTZ-lE-Rbo"/>
+                                                <constraint firstItem="jMF-k0-hGF" firstAttribute="baseline" secondItem="CB1-hf-iBs" secondAttribute="baseline" id="Yf3-8u-N68"/>
+                                                <constraint firstItem="CB1-hf-iBs" firstAttribute="leading" secondItem="jMF-k0-hGF" secondAttribute="trailing" constant="8" symbolic="YES" id="blG-2p-YON"/>
+                                                <constraint firstItem="CVP-f6-3e3" firstAttribute="leading" secondItem="BP2-K9-XHW" secondAttribute="leadingMargin" constant="-12" id="eY9-JO-chT"/>
+                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="trailing" secondItem="CB1-hf-iBs" secondAttribute="trailing" constant="-13" id="jmH-9b-WhX"/>
+                                                <constraint firstItem="jMF-k0-hGF" firstAttribute="leading" secondItem="CVP-f6-3e3" secondAttribute="trailing" constant="103" id="mFv-Dv-hBr"/>
                                                 <constraint firstItem="CVP-f6-3e3" firstAttribute="centerY" secondItem="BP2-K9-XHW" secondAttribute="centerY" constant="1" id="rZA-Pp-ef1"/>
-                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="leading" secondItem="BP2-K9-XHW" secondAttribute="leading" constant="152" id="uGv-FJ-BBR"/>
-                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CVP-f6-3e3" secondAttribute="trailing" constant="8" symbolic="YES" id="uxU-67-CW8"/>
-                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="top" secondItem="BP2-K9-XHW" secondAttribute="topMargin" id="xoH-Ja-FL8"/>
+                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="leading" secondItem="CVP-f6-3e3" secondAttribute="trailing" constant="8" symbolic="YES" id="trL-pW-aT4"/>
+                                                <constraint firstItem="CB1-hf-iBs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jMF-k0-hGF" secondAttribute="trailing" constant="8" symbolic="YES" id="vce-zP-tzi"/>
+                                                <constraint firstItem="lYe-GR-mHW" firstAttribute="top" secondItem="BP2-K9-XHW" secondAttribute="topMargin" id="yVu-y7-rcY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="addButton" destination="CB1-hf-iBs" id="TiG-j4-TWm"/>
+                                            <outlet property="favoriteButton" destination="jMF-k0-hGF" id="hOa-ks-PAY"/>
                                             <outlet property="searchAnimeTitle" destination="lYe-GR-mHW" id="nWO-x4-5aQ"/>
                                             <outlet property="searchImage" destination="CVP-f6-3e3" id="8b3-jB-x6L"/>
                                         </connections>
@@ -303,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26h-8b-6jy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="1527"/>
+            <point key="canvasLocation" x="1597" y="1527"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="q4P-LM-ebV">
@@ -315,7 +382,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="143" id="MQS-sg-Z5u">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="143"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="143"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MQS-sg-Z5u" id="rP0-ei-zz0">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
@@ -422,10 +489,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add-list" width="30" height="30"/>
-        <image name="favor-icon" width="30" height="30"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="text.badge.plus" catalog="system" width="128" height="109"/>
         <image name="tv" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

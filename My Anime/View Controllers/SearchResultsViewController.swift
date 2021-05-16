@@ -77,11 +77,16 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         }
         let anime = filteredResults.results[indexPath.row]
         let title = anime.title
+        let animeId = anime.mal_id
         cell.searchAnimeTitle.text = title
-        
+    
         let imgUrlString = anime.image_url //image url in string
         let imgURL = URL(string: imgUrlString)!
         cell.searchImage.af.setImage(withURL: imgURL)
+        
+        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: "", episodes: 0)
+        cell.item = item
+        cell.viewController = self
         return cell
     }
 }
