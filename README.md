@@ -31,13 +31,13 @@ MyAnime allows users to keep track of the animes they are watching, have already
 * [x] User can view a list of popular animes
 * [x] User can search for an anime
 * [x] User can see an app icon and a launch screen
-* [ ] User can add an anime from search results to their Watching list
-* [ ] User can add an anime from search results to their Watched list.
-* [ ] User can add an anime from search results to their To Watch list.
-* [ ] User can view the list of animes added to their To Watch list
-* [ ] User can view the list of animes added to their Watching list.
+* [x] User can add an anime from search results and top results to their Watching list
+* [x] User can add an anime from search results and top results to their Watched list.
+* [x] User can add an anime from search results and top results to their To Watch list.
+* [x] User can view the list of animes added to their To Watch list
+* [x] User can view the list of animes added to their Watching list.
+* [x] User can view the list of animes added to their Watched list
 * [ ] User can log the last episode they watched for an anime in their Watching list 
-* [ ] User can view the list of animes added to their Watched list
 * [ ] User can add an anime from the watching list to their Favorites list
 * [ ] User can add an anime from the watched list to their Favorites list
 * [ ] User can view the list of animes added to their Favorites list
@@ -176,5 +176,12 @@ Optional:
 
 ### User can see an app icon and a launch screen
 ![](https://i.imgur.com/RoqWE7y.gif)
+
+### User can add an anime from the Top anime list in the discover screen to their Watching list, Watched list and To Watch list. User can view the animes added to their Watching list, Watched list and To Watch list
+![](https://i.imgur.com/h3YAlmh.gif)
+
+### User can also add an anime from search results to their Watching list, Watched list and To Watch list. User can view the animes added to their Watching list, Watched list and To Watch list
+![](https://i.imgur.com/MOodhnB.gif)
+
 
 
