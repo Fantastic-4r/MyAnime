@@ -34,8 +34,6 @@ class AllAnimelistsTableViewController: UITableViewController {
                         return
                     }
                     
-                    print(item as! AnimelistItem)
-                    
                     self.dataModel.lists[index as! Int].items.append(item as! AnimelistItem)
                 })
 
@@ -58,10 +56,7 @@ class AllAnimelistsTableViewController: UITableViewController {
 
         let label = cell.viewWithTag(1000) as! UILabel
         let animeList = dataModel.lists[indexPath.row]
-        print(indexPath.row)
-        let listName = animeList.name
         label.text = animeList.name
-        print(listName)
         
         return cell
     }

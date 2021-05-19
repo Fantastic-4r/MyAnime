@@ -42,7 +42,6 @@ class DataModel {
             lists.append(animelist)
             lists.append(animelist2)
             lists.append(animelist3)
-            print(lists)
             
             indexOfSelectedChecklist = 0
             userDefaults.set(false, forKey: "FirstTime")

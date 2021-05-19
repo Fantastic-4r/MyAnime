@@ -64,7 +64,7 @@ class TopAnimeTableViewCell: UITableViewCell {
                  return
              }
              //Create a Data Task, which is how you perform actual API calls and networking tasks
-             let task = URLSession.shared.dataTask(with: url, completionHandler: { [self]
+             let task = URLSession.shared.dataTask(with: url, completionHandler: { 
                  data, _, error in
                  guard let data = data, error == nil else {
                      return
