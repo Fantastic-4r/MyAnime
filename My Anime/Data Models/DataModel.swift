@@ -9,6 +9,8 @@ import Foundation
 
 class DataModel {
     var lists = [Animelist]()
+    // lists should be list = [Watching, To Watch, Watched], but
+    // lists = [Watching, To Watch, Watched,] why?
     
     var indexOfSelectedChecklist: Int {
         get {
@@ -40,18 +42,18 @@ class DataModel {
             lists.append(animelist)
             lists.append(animelist2)
             lists.append(animelist3)
+            print(lists)
             
             indexOfSelectedChecklist = 0
             userDefaults.set(false, forKey: "FirstTime")
-            print(lists)
         }
     }
     
-    func sortChecklists() {
+    /*func sortChecklists() {
         lists.sort { list1, list2 in
             return list1.name.localizedStandardCompare(list2.name) == .orderedAscending
         }
-    }
+    }*/
     
     //MARK: - Data Persistence
     func saveChecklists() {
@@ -74,7 +76,7 @@ class DataModel {
                     UserDefaults.standard.set(false, forKey: "FirstTime")
                 }
                 
-                sortChecklists()
+               // sortChecklists()
             } catch {
                 print("Error decoding item array: \(error.localizedDescription)")
             }

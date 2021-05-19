@@ -1,18 +1,14 @@
 //
-//  SearchCell.swift
+//  AnimelistItemCell.swift
 //  My Anime
 //
-//  Created by Fnu Tsering on 4/27/21.
+//  Created by Fnu Tsering on 5/15/21.
 //
 
 import UIKit
 
-class SearchCell: UITableViewCell {
+class AnimelistItemCell: UITableViewCell {
 
-    @IBOutlet weak var searchImage: UIImageView!
-    
-    @IBOutlet weak var searchAnimeTitle: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

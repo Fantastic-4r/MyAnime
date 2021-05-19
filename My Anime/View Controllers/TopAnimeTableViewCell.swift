@@ -12,6 +12,7 @@ class TopAnimeTableViewCell: UITableViewCell {
     weak var viewController: UIViewController?
     var animeId: Int = 0
     var animelist: Animelist!
+    var item: AnimelistItem!
     
     @IBOutlet weak var TopImage: UIImageView!
     @IBOutlet weak var TopAnimeTitle: UILabel!
@@ -29,17 +30,14 @@ class TopAnimeTableViewCell: UITableViewCell {
                 
         // 2
         let watchingAction = UIAlertAction(title: "Watching", style: .default) { UIAlertAction in
-            //animelist.items.append(AnimelistItem(mal_id: animeId))
-            print(self.animeId)
-            self.getAnime(anime_id: self.animeId)
+
+            NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 0])
         }
         let toWatchAction = UIAlertAction(title: "To Watch", style: .default) { UIAlertAction in
-            //animelist.items.append(AnimelistItem(mal_id: animeId))
-            print(self.animeId)
+            NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 1])
         }
-        let watcehdAction = UIAlertAction(title: "Watched", style: .default) { UIAlertAction in
-            //animelist.items.append(AnimelistItem(mal_id: animeId))
-            print(self.animeId)
+        let watchedAction = UIAlertAction(title: "Watched", style: .default) { UIAlertAction in
+            NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 2])
         }
                 
         // 3
@@ -48,7 +46,7 @@ class TopAnimeTableViewCell: UITableViewCell {
         // 4
         optionMenu.addAction(watchingAction)
         optionMenu.addAction(toWatchAction)
-        optionMenu.addAction(watcehdAction)
+        optionMenu.addAction(watchedAction)
         optionMenu.addAction(cancelAction)
                 
         // 5
