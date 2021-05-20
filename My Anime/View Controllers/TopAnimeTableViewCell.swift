@@ -21,7 +21,21 @@ class TopAnimeTableViewCell: UITableViewCell {
     @IBOutlet var listButton: UIButton!
     
     @IBAction func favAnime(_ sender: Any) {
+        let animeFavorite = !favorited
+        if (animeFavorite)
+        {
+            let favoriteAction = UIAlertAction(title: "Favorite", style: .default){
+                UIAlertAction in NotificationCenter.default.post(name: Notification.Name("addItem"), object:["item": self.item!, "index": 0])
+            }
+        }
+        else
+        {
+            let removeFavorite = UIAlertAction(title: "UnFavorite", style: .default){ UIAlertAction in
+                NotificationCenter.default.post(name: Notification.Name("removeItem"), object: ["item": self.item!, "index": 0])
+            }
+        }
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
     }
     
     @IBAction func addAnime(_ sender: Any) {
@@ -94,7 +108,15 @@ class TopAnimeTableViewCell: UITableViewCell {
     
     var favorited:Bool = false
     func setFavorite(_ isFavorited:Bool) {
-        
+        favorited = isFavorited
+        if (favorited)
+        {
+            favButton.setImage(UIImage(named:"favor-icon-filled"), for: UIControl.State.normal)
+        }
+        else
+        {
+            favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
+        }
     }
     
     override func awakeFromNib() {

@@ -47,6 +47,11 @@ class DataModel {
             indexOfSelectedChecklist = 0
             userDefaults.set(false, forKey: "FirstTime")
         }
+        else
+        {
+            let animelist4 = Animelist(name: "Favorite")
+            lists.append(animelist4)
+        }
     }
     
     /*func sortChecklists() {

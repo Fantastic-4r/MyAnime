@@ -88,5 +88,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         cell.item = item
         cell.viewController = self
         return cell
+        
+        
     }
 }
