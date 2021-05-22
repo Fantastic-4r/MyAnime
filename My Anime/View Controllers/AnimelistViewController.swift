@@ -9,7 +9,7 @@ import UIKit
 
 class AnimelistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var tableView: AnimelistViewController!
+    @IBOutlet var tableView: UITableView!
     
     var animelist: Animelist!
     var topAnime: Animelist!
@@ -21,6 +21,11 @@ class AnimelistViewController: UIViewController, UITableViewDataSource, UITableV
         assignArray()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +40,12 @@ class AnimelistViewController: UIViewController, UITableViewDataSource, UITableV
         configureCell(for: cell, with: item)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        animelist.items.remove(at: indexPath.row)
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths, with: .automatic)
     }
     
     func configureCell(for cell: UITableViewCell, with item: AnimelistItem) {

@@ -9,9 +9,10 @@ import UIKit
 
 
 struct AnimeFromTop: Codable {
-   let mal_id: Int
-   let rank: Int
-   let title: String
-   let image_url: String
-   let episodes: Int?
+    let mal_id: Int
+    let rank: Int
+    let title: String
+    let image_url: String
+    let episodes: Int?
+    let synopsis: String?
 }

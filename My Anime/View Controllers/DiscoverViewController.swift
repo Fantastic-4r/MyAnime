@@ -106,6 +106,12 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
+        let anime = topResults?.top[indexPath.row]
+        performSegue(withIdentifier: "showAnimeDetails", sender: anime)
+    }
+    
     func setUpSearchBar() {
         searchResultsTableController = (storyboard?.instantiateViewController(withIdentifier: "SearchResultsViewController") as! SearchResultsViewController)
         
@@ -129,6 +135,13 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         // Sets this view controller as presenting view controller for the search interface
         definesPresentationContext = true //displays the search bar in the view controller properly
         searchController.searchBar.placeholder = "Search anime by name"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAnimeDetails" {
+            let vc = segue.destination as! AnimeDetailsViewController
+            vc.animeItem = (sender as! AnimeFromTop)
+        }
     }
      
 }

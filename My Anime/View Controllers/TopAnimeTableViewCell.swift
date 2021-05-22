@@ -44,6 +44,7 @@ class TopAnimeTableViewCell: UITableViewCell {
                 
         // 2
         let watchingAction = UIAlertAction(title: "Watching", style: .default) { UIAlertAction in
+
             NotificationCenter.default.post(name: Notification.Name("addItem"), object: ["item": self.item!, "index": 0])
         }
         let toWatchAction = UIAlertAction(title: "To Watch", style: .default) { UIAlertAction in
@@ -77,7 +78,7 @@ class TopAnimeTableViewCell: UITableViewCell {
                  return
              }
              //Create a Data Task, which is how you perform actual API calls and networking tasks
-             let task = URLSession.shared.dataTask(with: url, completionHandler: { [self]
+             let task = URLSession.shared.dataTask(with: url, completionHandler: { 
                  data, _, error in
                  guard let data = data, error == nil else {
                      return
@@ -126,6 +127,8 @@ class TopAnimeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        print("selected")
 
         // Configure the view for the selected state
     }
