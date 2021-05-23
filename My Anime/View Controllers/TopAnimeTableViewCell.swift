@@ -25,12 +25,12 @@ class TopAnimeTableViewCell: UITableViewCell {
         if (animeFavorite)
         {
             setFavorite(true)
-           NotificationCenter.default.post(name: Notification.Name("addItem"), object:["item": self.item!, "index": 0])
+           NotificationCenter.default.post(name: Notification.Name("addItem"), object:["item": self.item!, "index": 3])
         }
         else
         {
             setFavorite(false)
-            NotificationCenter.default.post(name: Notification.Name("removeItem"), object: ["item": self.item!, "index": 0])
+            NotificationCenter.default.post(name: Notification.Name("removeItem"), object: ["item": self.item!, "index": 3])
 
         }
         

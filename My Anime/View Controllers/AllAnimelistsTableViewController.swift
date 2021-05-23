@@ -52,7 +52,8 @@ class AllAnimelistsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataModel.lists.count
+        print(dataModel.lists.count)
+        return 4
     }
 
     
