@@ -37,12 +37,13 @@ MyAnime allows users to keep track of the animes they are watching, have already
 * [x] User can view the list of animes added to their To Watch list
 * [x] User can view the list of animes added to their Watching list.
 * [x] User can view the list of animes added to their Watched list
+* [x] User can delete an anime from their lists
+
+**Optional Nice-to-have Stories**
 * [ ] User can log the last episode they watched for an anime in their Watching list 
 * [ ] User can add an anime from the watching list to their Favorites list
 * [ ] User can add an anime from the watched list to their Favorites list
 * [ ] User can view the list of animes added to their Favorites list
-
-**Optional Nice-to-have Stories**
 * [ ] User can tap on an anime to view more details about that anime
 * [ ] User can tap on a button next to an anime in the To Watch list to move it to the Watching list. 
 * [ ] User can view Anime schedule of the week
@@ -177,11 +178,12 @@ Optional:
 ### User can see an app icon and a launch screen
 ![](https://i.imgur.com/RoqWE7y.gif)
 
-### User can add an anime from the Top anime list in the discover screen to their Watching list, Watched list and To Watch list. User can view the animes added to their Watching list, Watched list and To Watch list
-![](https://i.imgur.com/h3YAlmh.gif)
+### User can add an anime from the Top anime list and from the search results to their Watching list, Watched list and To Watch list. User can also view the list of animes added to their lists.
+![](https://i.imgur.com/vMpRqiU.gif)
 
-### User can also add an anime from search results to their Watching list, Watched list and To Watch list. User can view the animes added to their Watching list, Watched list and To Watch list
-![](https://i.imgur.com/MOodhnB.gif)
+### User can delete animes from their lists
+![](https://i.imgur.com/MU6S0sT.gif)
+
 
 
 
