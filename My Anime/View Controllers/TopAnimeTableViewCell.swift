@@ -24,18 +24,16 @@ class TopAnimeTableViewCell: UITableViewCell {
         let animeFavorite = !favorited
         if (animeFavorite)
         {
-            let favoriteAction = UIAlertAction(title: "Favorite", style: .default){
-                UIAlertAction in NotificationCenter.default.post(name: Notification.Name("addItem"), object:["item": self.item!, "index": 0])
-            }
+            setFavorite(true)
+           NotificationCenter.default.post(name: Notification.Name("addItem"), object:["item": self.item!, "index": 0])
         }
         else
         {
-            let removeFavorite = UIAlertAction(title: "UnFavorite", style: .default){ UIAlertAction in
-                NotificationCenter.default.post(name: Notification.Name("removeItem"), object: ["item": self.item!, "index": 0])
-            }
+            setFavorite(false)
+            NotificationCenter.default.post(name: Notification.Name("removeItem"), object: ["item": self.item!, "index": 0])
+
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
     }
     
     @IBAction func addAnime(_ sender: Any) {
@@ -112,11 +110,11 @@ class TopAnimeTableViewCell: UITableViewCell {
         favorited = isFavorited
         if (favorited)
         {
-            favButton.setImage(UIImage(named:"favor-icon-filled"), for: UIControl.State.normal)
+            favButton.setImage(UIImage(systemName: "suit.heart.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
         }
         else
         {
-            favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
+            favButton.setImage(UIImage(systemName: "heart")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
         }
     }
     

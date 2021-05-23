@@ -6,12 +6,15 @@
 //
 
 import UIKit
+ 
 
 class AllAnimelistsTableViewController: UITableViewController {
-
-    var dataModel: DataModel!
     
+    
+    var dataModel: DataModel!
+
     var observer: NSObjectProtocol?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,9 @@ class AllAnimelistsTableViewController: UITableViewController {
                     }
                     
                     self.dataModel.lists[index as! Int].items.append(item as! AnimelistItem)
+                    print(self.dataModel.lists[3].items)
                 })
+    
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
