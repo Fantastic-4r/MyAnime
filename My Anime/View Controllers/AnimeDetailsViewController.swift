@@ -25,6 +25,7 @@ class AnimeDetailsViewController: UIViewController {
     }
     
     func setupLayout() {
+        print(animeItem)
         synopsisLabel.text = animeItem.synopsis
         if animeItem.episodes == 0 {
             episodesLabel.text = "Null"
@@ -35,6 +36,8 @@ class AnimeDetailsViewController: UIViewController {
         let imgUrlString = animeItem.image_url //image url in string
         let imgURL = URL(string: imgUrlString)!
         posterView.af.setImage(withURL: imgURL)
+        backdropView.af.setImage(withURL: imgURL)
+        
     }
     
 

@@ -102,8 +102,6 @@ class TopAnimeTableViewCell: UITableViewCell {
              }) //end of task definition
              task.resume() //After you create the task, you must start it by calling its resume() method.
      }
-        
-    
     
     var favorited:Bool = false
     func setFavorite(_ isFavorited:Bool) {
@@ -125,10 +123,13 @@ class TopAnimeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        print("selected")
 
         // Configure the view for the selected state
+    }
+    
+    func didSelect(indexPath: NSIndexPath) {
+            // perform some actions here
+        print("selected")
     }
 
 }
