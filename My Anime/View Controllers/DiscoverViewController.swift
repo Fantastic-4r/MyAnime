@@ -81,6 +81,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         return 50 //return 50 because get request to the top/anime/ endpoint returns a list of 50 anime
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //reuse cell prototype. Reuse the cell of class TopAnimeTableViewCell with identifier of same name
@@ -98,7 +99,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //this function .af.setImage(withURL: URL) from the pod AlomofireImage downloads the images from the imgURL and sets it to the UIImageView.
         cell.TopImage.af.setImage(withURL: imgURL)
-        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: "", episodes: 0)
+        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: anime.synopsis, episodes: 0)
         
         cell.item = item
         
@@ -107,7 +108,11 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected")
+//        if let cell = tableView.cellForRow(at: indexPath) as? TopAnimeTableViewCell {
+//            cell.didSelect(indexPath: indexPath as NSIndexPath)
+//        }
+//
+//        print("selected")
         let anime = topResults?.top[indexPath.row]
         performSegue(withIdentifier: "showAnimeDetails", sender: anime)
     }
