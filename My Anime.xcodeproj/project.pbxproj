@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3BBF30A35C66260E68B42095 /* Pods_My_AnimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021224BF76EBAC8E2FB41E51 /* Pods_My_AnimeUITests.framework */; };
+		D21D7678265CB238006DA7B5 /* synopsis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D7677265CB238006DA7B5 /* synopsis.swift */; };
+		D21D767D265CE6C4006DA7B5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D767C265CE6C4006DA7B5 /* APICaller.swift */; };
 		D235AA032650B2BF00BA5F2A /* AnimelistItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235AA022650B2BF00BA5F2A /* AnimelistItemCell.swift */; };
 		D23615C42631EE73002D44BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23615C32631EE73002D44BE /* AppDelegate.swift */; };
 		D23615C62631EE73002D44BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23615C52631EE73002D44BE /* SceneDelegate.swift */; };
@@ -61,6 +63,8 @@
 		34AABEAC26DA3355DC366CBB /* Pods-My AnimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My AnimeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My AnimeTests/Pods-My AnimeTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B38504597AF2C158B0CE4A2 /* Pods-My AnimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My AnimeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My AnimeUITests/Pods-My AnimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5EDF2B1074F767457D9155 /* Pods_My_AnimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_AnimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21D7677265CB238006DA7B5 /* synopsis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = synopsis.swift; sourceTree = "<group>"; };
+		D21D767C265CE6C4006DA7B5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		D235AA022650B2BF00BA5F2A /* AnimelistItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimelistItemCell.swift; sourceTree = "<group>"; };
 		D23615C02631EE73002D44BE /* My Anime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Anime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23615C32631EE73002D44BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				FC7C7D69263F03D300CD7179 /* DataModel.swift */,
 				FC7C7D6B263F043C00CD7179 /* Animelist.swift */,
 				FC7C7D6D263F059B00CD7179 /* AnimelistItem.swift */,
+				D21D7677265CB238006DA7B5 /* synopsis.swift */,
+				D21D767C265CE6C4006DA7B5 /* APICaller.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -206,12 +212,12 @@
 			children = (
 				D2D1802726325E3D00AC9E6A /* TopAnimeTableViewCell.swift */,
 				D2D18037263271E000AC9E6A /* DiscoverViewController.swift */,
+				FC1EDB6C2655CA4800630195 /* AnimeDetailsViewController.swift */,
 				D2AACE852638A89400416CB0 /* SearchResultsViewController.swift */,
 				D2AACE922638CE7400416CB0 /* SearchCell.swift */,
 				FC7C7D71263F0D5B00CD7179 /* AllAnimelistsTableViewController.swift */,
 				FC5FBB52263F5EBD00F7779B /* AnimelistViewController.swift */,
 				D235AA022650B2BF00BA5F2A /* AnimelistItemCell.swift */,
-				FC1EDB6C2655CA4800630195 /* AnimeDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -440,8 +446,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21D7678265CB238006DA7B5 /* synopsis.swift in Sources */,
 				D23615C82631EE73002D44BE /* ViewController.swift in Sources */,
 				D2AACE932638CE7400416CB0 /* SearchCell.swift in Sources */,
+				D21D767D265CE6C4006DA7B5 /* APICaller.swift in Sources */,
 				D23615C42631EE73002D44BE /* AppDelegate.swift in Sources */,
 				D2D1802826325E3D00AC9E6A /* TopAnimeTableViewCell.swift in Sources */,
 				D236163726321AE4002D44BE /* TopAnimes.swift in Sources */,

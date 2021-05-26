@@ -14,5 +14,5 @@ struct AnimeFromTop: Codable {
     let title: String
     let image_url: String
     let episodes: Int?
-    let synopsis: String?
+    var synopsis: String?
 }

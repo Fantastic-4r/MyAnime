@@ -8,11 +8,20 @@
 import UIKit
 
 class AnimelistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
+    
+ 
+    
+    
+    
     
     @IBOutlet var tableView: UITableView!
     
     var animelist: Animelist!
     var topAnime: Animelist!
+    
+    
+    var pickerView = UIPickerView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +31,8 @@ class AnimelistViewController: UIViewController, UITableViewDataSource, UITableV
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

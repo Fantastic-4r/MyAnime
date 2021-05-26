@@ -18,10 +18,13 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // topResults will contain the array of dictionaries that represent the top animes returned to us by an API call
     var topResults : TopAnimes?
+    
     //By initializing UISearchController with a nil value for searchResultsController, you’re telling the search controller that you want to use the same view you’re searching to display the results. If you specify a different view controller here, the search controller will display the results in that view controller instead.
     var searchController: UISearchController!
     //In order for the DiscoverViewController to respond to the search bar, it must implement UISearchResultsUpdating. This protocol defines methods to update search results based on information the user enters into the search bar. Do this outside of the main DiscoverViewController function at the bottom.
     private var searchResultsTableController : SearchResultsViewController! //creates an instance of the class SearchViewController
+    
+    var anime_with_synopsis : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +70,12 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
             } //final is the top results array
             //  print(final.top)
             topResults = final
+
             group.leave()
-            //      print(topResults?.top[0] as Any) //if episodes = nil, set episodes to 0
+           
             
-            
-            //   print("Got data: \(data)")
         })
+
         task.resume() //starts the API call
         
     }
@@ -99,7 +102,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //this function .af.setImage(withURL: URL) from the pod AlomofireImage downloads the images from the imgURL and sets it to the UIImageView.
         cell.TopImage.af.setImage(withURL: imgURL)
-        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: anime.synopsis, episodes: 0)
+        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: "", episodes: 0)
         
         cell.item = item
         
@@ -107,11 +110,11 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    //Segues to AnimeDetailsViewController when a cell is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if let cell = tableView.cellForRow(at: indexPath) as? TopAnimeTableViewCell {
 //            cell.didSelect(indexPath: indexPath as NSIndexPath)
 //        }
-//
 //        print("selected")
         let anime = topResults?.top[indexPath.row]
         performSegue(withIdentifier: "showAnimeDetails", sender: anime)
@@ -148,5 +151,5 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
             vc.animeItem = (sender as! AnimeFromTop)
         }
     }
-     
+
 }
