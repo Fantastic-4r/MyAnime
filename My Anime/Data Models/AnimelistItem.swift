@@ -12,6 +12,6 @@ struct AnimelistItem: Codable {
     let image_url: String
     let title: String
     let synopsis: String?
-    var episodes: Int = 0
+    let episodes : Int?
     //var checked = false
 }

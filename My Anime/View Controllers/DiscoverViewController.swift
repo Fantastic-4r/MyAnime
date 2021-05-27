@@ -102,7 +102,8 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //this function .af.setImage(withURL: URL) from the pod AlomofireImage downloads the images from the imgURL and sets it to the UIImageView.
         cell.TopImage.af.setImage(withURL: imgURL)
-        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: "", episodes: 0)
+        
+        let item: AnimelistItem! = AnimelistItem(mal_id: animeId, image_url: imgUrlString, title: title, synopsis: anime.synopsis, episodes: anime.episodes)
         
         cell.item = item
         

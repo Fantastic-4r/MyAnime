@@ -14,7 +14,7 @@ class AllAnimelistsTableViewController: UITableViewController {
     var dataModel: DataModel!
 
     var observer: NSObjectProtocol?
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class AllAnimelistsTableViewController: UITableViewController {
                     self.dataModel.lists[index as! Int].items.append(item as! AnimelistItem)
                     print(self.dataModel.lists[3].items)
                 })
+
     
 
         // Uncomment the following line to preserve selection between presentations
@@ -53,7 +54,7 @@ class AllAnimelistsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(dataModel.lists.count)
-        return 4
+        return 3
     }
 
     
