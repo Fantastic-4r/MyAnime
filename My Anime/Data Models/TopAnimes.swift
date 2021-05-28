@@ -8,5 +8,5 @@
 import UIKit
 
 struct TopAnimes: Codable {
-   let top: [AnimeFromTop] //top is the key for the array of top animes in the JSON format
+   var top: [AnimeFromTop] //top is the key for the array of top animes in the JSON format
 }

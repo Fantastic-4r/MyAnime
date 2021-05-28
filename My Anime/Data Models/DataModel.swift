@@ -39,18 +39,20 @@ class DataModel {
             let animelist = Animelist(name: "Watching")
             let animelist2 = Animelist(name: "To Watch")
             let animelist3 = Animelist(name: "Watched")
+            let animelist4 = Animelist(name: "Favorite")
             lists.append(animelist)
             lists.append(animelist2)
             lists.append(animelist3)
+            lists.append(animelist4)
             
             indexOfSelectedChecklist = 0
             userDefaults.set(false, forKey: "FirstTime")
         }
-        else
-        {
-            let animelist4 = Animelist(name: "Favorite")
-            lists.append(animelist4)
-        }
+        //else
+     //   {
+      //      let animelist4 = Animelist(name: "Favorite")
+     //       lists.append(animelist4)
+     //   }
     }
     
     /*func sortChecklists() {
