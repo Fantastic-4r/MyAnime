@@ -40,11 +40,11 @@ MyAnime allows users to keep track of the animes they are watching, have already
 * [x] User can delete an anime from their lists
 
 **Optional Nice-to-have Stories**
+* [x] User can tap on an anime to view more details about that anime
 * [ ] User can log the last episode they watched for an anime in their Watching list 
 * [ ] User can add an anime from the watching list to their Favorites list
 * [ ] User can add an anime from the watched list to their Favorites list
 * [ ] User can view the list of animes added to their Favorites list
-* [ ] User can tap on an anime to view more details about that anime
 * [ ] User can tap on a button next to an anime in the To Watch list to move it to the Watching list. 
 * [ ] User can view Anime schedule of the week
 * [ ] User can see ratings for an anime
@@ -184,6 +184,8 @@ Optional:
 ### User can delete animes from their lists
 ![](https://i.imgur.com/MU6S0sT.gif)
 
+### User can click on an anime for more detail about it
+![](https://i.imgur.com/v4BQIZf.gif)
 
 
 
