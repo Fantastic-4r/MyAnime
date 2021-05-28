@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5H-gw-RB4">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5H-gw-RB4">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,21 +14,21 @@
             <objects>
                 <tableViewController id="Inq-m6-zVy" customClass="AllAnimelistsTableViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="244" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pjj-F2-mjc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimeListCell" rowHeight="250" id="TCn-ls-CSS">
-                                <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCn-ls-CSS" id="5Wu-aD-euU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-iw-7kr">
-                                            <rect key="frame" x="40" y="31" width="334" height="188"/>
+                                            <rect key="frame" x="40" y="31" width="310" height="188"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -69,19 +69,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="ShowAnimelist" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aXc-be-uYD" customClass="AnimelistViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1i9-wT-scf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="AnimelistItemCell" rowHeight="153" id="Q70-JS-09C" customClass="AnimelistItemCell" customModule="My_Anime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="153"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="153"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q70-JS-09C" id="TxO-pr-gzT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikm-M4-FSx">
-                                            <rect key="frame" x="143" y="24" width="251" height="50"/>
+                                            <rect key="frame" x="119" y="24" width="251" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="251" id="5Ai-iR-QZz"/>
                                             </constraints>
@@ -90,7 +90,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jg3-99-c0F">
-                                            <rect key="frame" x="11" y="7" width="115" height="139"/>
+                                            <rect key="frame" x="-13" y="7" width="115" height="139"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="115" id="eNd-KY-ajn"/>
                                                 <constraint firstAttribute="height" constant="139" id="pAf-Bv-NG2"/>
@@ -131,11 +131,11 @@
             <objects>
                 <viewController id="u0Q-qq-USB" customClass="AnimeDetailsViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsF-HZ-IT3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6c-82-b3T">
-                                <rect key="frame" x="0.0" y="88" width="414" height="829"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="912"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EI4-eY-qiu" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
@@ -195,7 +195,6 @@
                                     <constraint firstAttribute="bottom" secondItem="EI4-eY-qiu" secondAttribute="bottom" id="JkO-aL-Muf"/>
                                     <constraint firstAttribute="trailing" secondItem="EI4-eY-qiu" secondAttribute="trailing" id="PbQ-0F-xm9"/>
                                     <constraint firstItem="EI4-eY-qiu" firstAttribute="top" secondItem="D6c-82-b3T" secondAttribute="top" id="n8d-mH-Vvs"/>
-                                    <constraint firstAttribute="height" constant="1000" id="vgu-NU-det"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="cvP-zj-BHV"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Gp2-QA-r5h"/>
@@ -205,10 +204,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D6c-82-b3T" firstAttribute="leading" secondItem="ieG-WA-72g" secondAttribute="leading" id="Aw4-Pl-F0y"/>
+                            <constraint firstItem="D6c-82-b3T" firstAttribute="top" secondItem="ieG-WA-72g" secondAttribute="top" id="DNV-I7-Aid"/>
                             <constraint firstItem="EI4-eY-qiu" firstAttribute="width" secondItem="QsF-HZ-IT3" secondAttribute="width" id="FdM-hu-Tql"/>
-                            <constraint firstItem="D6c-82-b3T" firstAttribute="bottom" secondItem="ieG-WA-72g" secondAttribute="bottom" id="MJc-72-XsQ"/>
+                            <constraint firstItem="D6c-82-b3T" firstAttribute="bottom" secondItem="ieG-WA-72g" secondAttribute="bottom" id="SYp-fe-jwd"/>
                             <constraint firstItem="D6c-82-b3T" firstAttribute="trailing" secondItem="ieG-WA-72g" secondAttribute="trailing" id="dp6-QN-izz"/>
-                            <constraint firstItem="D6c-82-b3T" firstAttribute="top" secondItem="ieG-WA-72g" secondAttribute="top" id="jll-h4-U85"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uUA-Q8-7Ns"/>
@@ -229,29 +228,29 @@
             <objects>
                 <viewController id="j8J-gz-CAA" customClass="DiscoverViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwF-TW-qQO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-SG-rq1">
-                                <rect key="frame" x="0.0" y="191" width="414" height="705"/>
+                                <rect key="frame" x="0.0" y="191" width="390" height="653"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="TopCell" rowHeight="153" id="Gcn-2q-Hly" customClass="TopAnimeTableViewCell" customModule="My_Anime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="153"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gcn-2q-Hly" id="xhN-ht-Qzn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vz4-oj-sPX">
-                                                    <rect key="frame" x="8" y="7" width="113.5" height="139"/>
+                                                    <rect key="frame" x="8.0000000000000071" y="7" width="113.66666666666669" height="139"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="113.5" id="R3j-Re-XDm"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-Lq-dl3">
-                                                    <rect key="frame" x="130.5" y="0.0" width="271.5" height="105"/>
+                                                    <rect key="frame" x="130.66666666666663" y="0.0" width="247.33333333333337" height="105"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="D50-PQ-1fh"/>
                                                     </constraints>
@@ -260,7 +259,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-9M-gGd" userLabel="listButton">
-                                                    <rect key="frame" x="298" y="126" width="96" height="20"/>
+                                                    <rect key="frame" x="274" y="126" width="96" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="aar-nz-Cur"/>
                                                     </constraints>
@@ -300,7 +299,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Animes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-zW-apx">
-                                <rect key="frame" x="20" y="154" width="131" height="29"/>
+                                <rect key="frame" x="16" y="154" width="131" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -333,22 +332,22 @@
             <objects>
                 <viewController storyboardIdentifier="SearchResultsViewController" id="2sE-7K-mnK" customClass="SearchResultsViewController" customModule="My_Anime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J8T-zk-Upd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1cU-Ul-r7m">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchResultsCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="153" id="qP8-uh-DV5" customClass="SearchCell" customModule="My_Anime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="153"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qP8-uh-DV5" id="BP2-K9-XHW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYe-GR-mHW">
-                                                    <rect key="frame" x="131" y="11" width="264" height="66"/>
+                                                    <rect key="frame" x="107" y="11" width="264" height="66"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="66" id="WA4-Ff-jSe"/>
                                                         <constraint firstAttribute="width" constant="264" id="iho-FC-I5E"/>
@@ -358,11 +357,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-f6-3e3">
-                                                    <rect key="frame" x="8" y="8" width="115" height="139"/>
+                                                    <rect key="frame" x="8" y="8" width="91" height="139"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-hf-iBs">
-                                                    <rect key="frame" x="317" y="115" width="91" height="27"/>
+                                                    <rect key="frame" x="293" y="115" width="91" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="6TP-RU-coe"/>
                                                     </constraints>
@@ -379,6 +378,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="CB1-hf-iBs" firstAttribute="bottom" secondItem="BP2-K9-XHW" secondAttribute="bottomMargin" id="0il-ug-8lD"/>
+                                                <constraint firstItem="CB1-hf-iBs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CVP-f6-3e3" secondAttribute="trailing" constant="8" symbolic="YES" id="9Nm-gC-EpB"/>
                                                 <constraint firstAttribute="trailing" secondItem="CB1-hf-iBs" secondAttribute="trailing" constant="6" id="A6f-I4-sBA"/>
                                                 <constraint firstItem="CB1-hf-iBs" firstAttribute="top" secondItem="lYe-GR-mHW" secondAttribute="bottom" constant="38" id="HcO-G0-xdY"/>
                                                 <constraint firstItem="CVP-f6-3e3" firstAttribute="top" secondItem="BP2-K9-XHW" secondAttribute="topMargin" constant="-3" id="JTZ-lE-Rbo"/>
@@ -414,11 +414,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="1cU-Ul-r7m" id="Tcs-s3-bMZ"/>
+                        <segue destination="u0Q-qq-USB" kind="show" identifier="showAnimeDetails" id="1Vg-4o-psc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26h-8b-6jy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="1527"/>
+            <point key="canvasLocation" x="1177" y="2294"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Hfd-eK-HAB">
@@ -446,7 +447,7 @@
                     <tabBarItem key="tabBarItem" title="Discover" image="magnifyingglass" catalog="system" id="EUs-dN-l8e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="svU-4e-bTX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -465,7 +466,7 @@
                     <tabBarItem key="tabBarItem" title="My Anime" image="tv" catalog="system" id="mBf-kl-GRz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uc7-qc-LRu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -478,6 +479,9 @@
             <point key="canvasLocation" x="-630" y="777"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Vg-4o-psc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="text.badge.plus" catalog="system" width="128" height="109"/>

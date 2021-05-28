@@ -98,4 +98,19 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let cell = tableView.cellForRow(at: indexPath) as? TopAnimeTableViewCell {
+//            cell.didSelect(indexPath: indexPath as NSIndexPath)
+//        }
+//        print("selected")
+        let anime = searchResults?.results[indexPath.row]
+        performSegue(withIdentifier: "showAnimeDetails", sender: anime)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAnimeDetails" {
+            let dvc = segue.destination as! AnimeDetailsViewController
+            dvc.animeItem = (sender as! AnimeFromTop)
+        }
+    }
 }

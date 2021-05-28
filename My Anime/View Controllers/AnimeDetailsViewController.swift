@@ -23,7 +23,6 @@ class AnimeDetailsViewController: UIViewController {
     
     var animeSynopsis : String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
